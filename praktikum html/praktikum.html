@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Form Taufiq</title>
+    <style>
+        /* Mengambil gaya visual dari codingan teman */
+        body { 
+            font-family: sans-serif; 
+            background-color: white; 
+            color: black; 
+            padding: 20px; 
+        }
+        aside { 
+            background: #f4f4f4; 
+            padding: 10px; 
+            border-left: 5px solid #ccc; 
+            margin: 15px 0;
+        }
+        table, th, td { 
+            border: 1px solid black; 
+            border-collapse: collapse; 
+            padding: 8px; 
+            margin-top: 15px;
+        }
+        .yellow-heading { 
+            color: #d4af37; /* Kuning emas agar lebih terbaca di bg putih */
+            background-color: #333;
+            display: inline-block;
+            padding: 5px 10px;
+        }
+        footer {
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            font-size: 0.9em;
+        }
+        .interactive-section {
+            background: #eef2f3;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="yellow-heading">Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <img src="https://tse2.mm.bing.net/th/id/OIP.68mJiqTN9Qu6msp4MlvEpwHaE8?pid=Api&h=220&P=0" width="300" alt="Banner">
+
+    <aside>
+        <p><strong>Info Sidebar:</strong> Ini adalah konten sidebar untuk informasi tambahan.</p>
+    </aside>
+
+    <article>
+        <h2>Ini Artikel</h2>
+        <p>Ini adalah konten artikel dengan berbagai informasi menarik.</p>
+        <h3>Subjudul</h3>
+        <p>Ini adalah konten tambahan untuk informasi lebih dalam.</p>
+    </article>
+
+    <div class="interactive-section">
+        <h3>Interaksi JavaScript</h3>
+        <button id="btnAlert">Klik Saya (Alert)</button>
+        <button id="btnUbah">Ubah Teks Judul</button>
+        <h1 id="judulInteraktif">Teks Awal</h1>
+        
+        <input type="text" id="inputNama" placeholder="Ketik nama di sini...">
+        <button id="btnTampilkan">Tampilkan Nama</button>
+        <p id="hasilDisplay"></p>
+    </div>
+
+    <form action="/submit" method="post">
+        <label>Nama:</label><br>
+        <input type="text" id="formNama"><br><br>
+
+        <label>Nomor:</label><br>
+        <input type="number"><br><br>
+
+        <label>Tanggal:</label><br>
+        <input type="date"><br><br>
+
+        <label>Waktu:</label><br>
+        <input type="time"><br><br>
+
+        <label>Warna:</label><br>
+        <input type="color"><br><br>
+
+        <input type="submit" value="Kirim Data">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Umur</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Andi</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <p>&copy; 2026 - Cek Test Taufiq Komara</p>
+    </footer>
+
+    <script>
+        // 1. Tombol Alert
+        document.getElementById("btnAlert").addEventListener("click", () => {
+            alert("Halo Taufiq! Fitur JavaScript sudah aktif.");
+        });
+
+        // 2. Ubah Teks Judul
+        const judul = document.getElementById("judulInteraktif");
+        document.getElementById("btnUbah").addEventListener("click", () => {
+            judul.textContent = "Teks Berhasil Diubah!";
+            judul.style.color = "orange";
+        });
+
+        // 3. Menampilkan Input Nama ke Paragraf
+        document.getElementById("btnTampilkan").addEventListener("click", function() {
+            const nama = document.getElementById("inputNama").value;
+            const hasil = document.getElementById("hasilDisplay");
+            
+            if (nama.trim() === "") {
+                alert("Harap masukkan nama terlebih dahulu!");
+            } else {    
+                hasil.innerHTML = "Selamat datang, <strong>" + nama + "</strong>!";
+                hasil.style.color = "green";
+            }
+        });
+    </script>
+</body>
+</html> 
